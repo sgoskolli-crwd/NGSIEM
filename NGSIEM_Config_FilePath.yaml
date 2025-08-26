@@ -1,0 +1,45 @@
+# Define the source for logs
+sources:
+  paloalto_logs:
+    type: file
+    include:
+      - "/var/log/remote/PaloAlto/*/*.log" 
+    #exclude:
+    # - "/var/log/remote/*.gz"        
+    sink: paloalto_sink
+
+  cisco_asa_logs:
+    type: file
+    include:
+      - "/var/log/remote/CiscoAsa/*/*.log"
+    #exclude:
+    # - "/var/log/remote/*.gz"         
+    sink: cisco_asa_sink
+
+  cisco_ftd_logs:
+    type: file
+    include:
+      - "/var/log/remote/CiscoFtd/*/*.log" 
+    #exclude:
+    # - "/var/log/remote/*.gz"    
+    sink: cisco_ftd_sink    
+
+# Define the sink (destination) for the logs
+sinks:
+  paloalto_sink:
+    type: hec  
+    url: "INSERT_URL_HERE"  
+    token: "INSERT_TOKEN_HERE"  
+    workers: 4
+
+  cisco_asa_sink:
+    type: hec 
+    url: "INSERT_URL_HERE"  
+    token: "INSERT_TOKEN_HERE" 
+    workers: 4
+
+  cisco_ftd_sink:
+    type: hec  
+    url: "INSERT_URL_HERE"  
+    token: "INSERT_TOKEN_HERE" 
+    workers: 4    
