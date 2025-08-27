@@ -1,3 +1,6 @@
+# Define Collectors Working Directory
+dataDir: /var/lib/logscale-collector
+
 # Define the source for logs
 sources:
   paloalto_logs:
