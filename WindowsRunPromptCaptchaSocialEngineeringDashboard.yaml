@@ -1,0 +1,407 @@
+name: Windows Run Prompt Captcha Social Engineering Dashboard
+timeSelector: {}
+sharedTimeInterval:
+  enabled: false
+  isLive: false
+  start: 1d
+widgets:
+  17a275b2-d71a-49d2-9eb9-ef8d9105769f:
+    x: 0
+    y: 0
+    height: 4
+    queryString: |
+      // hunting rule for all associated IOCs for windows run prompt captcha social engineering
+
+      // Hashes
+      case { in("SHA256HashData", values=["06a92b5082cf6e7589828a2e63620b0115a87c7bec167b35b915ccc1b66a2b1f", "181ee39752f0cc3e6c39dfb2ff2659c83e5be830dfb3a01e61e2f758d1b824d2", "1cb986760f998178e6ea6462091f50f7ecbbed8afd0193dfcf52c9145022139d", "27f53519a86ad03afaf6cd244e95fe2957ef699c1e790c8bf0a27f2220fdc125", "2b84f2c36e9e5ab5e4ccb2285f221b2632c1842bca485ce0d59f55f44e7c174f", "2cafcd562923e8c0d15d5d4278ed5b5e17d40fe3a68bc838bd780b8186e79a7f", "2f107925e7625b1eb584c3b8d1e850afe91b1742a8df2b5839459d9ab21c438d", "39283c84beb4add2e762b1277d9d2095ca8added7aa5c10cccecbff92a0b9b91", "3e22cd415038dd33f758aa57b04eab2cbe15dff3ad1761cf0bcb085a8a669f74", "473f39841e0c75daf719c945daa007143014dd71ea100dfa68f315b816558ad1", "4ecd6775f28f332e57526aac79f37a09b95cdab981c335bd9782c6c96957af8b", "507bbe309c873a6ff72658f4ab8616103ce3d3e747a23f2d2bbe5cdaff72e11a", "521e60bf333c29fb317d451e20d8403c54ae9058cd41520fa195aaca6ec1b3f9", "53faad8da1a962c41d1472101fc8dd0e8772f9e51c3910540fb38afaee3d7b19", "54e9b1b9d6c5316e094a5d61c0056c51e9b157af5abdc704c8e418ed2ab54191", "58ba72ce7dfd9166e3abf498568e49a32c19a7c2760f813d883ccf04a5b706a9", "5c9c48a084b2f4d3d2ab152c09ed75091314a5186d824a24b2057d2d2b5c33a9", "67904cfefe43303ad16b1501450006136a5cc55bf9ad2345cf963e31b5858016", "78095210aea7fc2a229f32f8fb03142d223d72e594dbf81629ad4e8c116e0934", "7d08b1fbabe7e0c836569e6943c70c7368a00584b0fe0f128c58abf8568b72ee", "7d57e1f2f5c445a210dd3b228058a4c57583f1e1621cd241f061cd63a5503d93", "7dadbc9be84a477fa2293492bd3f4263286dfbd9e9b88b0683584c083c9aefbd", "7e4bfc88fed28d86e6cfddd46982ac3f68a836f533f701d9273e3837e43dc846", "7f21659ae9692d517b96389596eb7d11bb5ee7288968f8394085a53d27475bb8", "81aa5f574fb876b16524e3d5f0894e5070e62f02e984b52da331b1ba02c4e8c3", "9e1e76c4fdec7452284fba2b74db92f05ff9ad233e3f0da85cb6dca9e5af3e79", "9fae34f3b01e26a365213453814710e9c6c3b01ea6599a58992cdd69629ce101", "9fe4b60c43d7a221e1d190c268e31d69d2948eecc4abf3495dc7684e171f698a", "a2d1f717b39428fd47b3e2b9c01577e1b0528bbedccbf3749edd3ded4341760d", "aada6d0ba7a194fd0fbc769b32dc9eb51c32425cf0831a2e532b55fa83a86a84", "ae520e3cb6f3e8c9dee215be463302617552befd2a481d51c80863c051c86020", "b3b79edbf38bb3cc400cb350750bc5c51a0ed25d22ef26eb9372929d14726d51", "b9f8abe21df666c19b43ed55934712a13c71af7a23593476b991af07b3400cfd", "bd3ba3be9598188d3aa7cd4f8af11d78c2cd11181c634a2bef52143132747fb7", "bdd702014335b7b966c8a5f7139b018c791e041b1d69777fb741b8760d16ba0b", "d3b0a70d5995d7a07d0796b86a8a64d9de5c59769e6faf4194c562b4943c4e84", "d4b1512fd3e7285383a8f11c6c0bd29fdddf0002d12778d6fd41e0c190ac671e", "d6960338b9f0168116f21f4568a24c0067adc8ba9ea2f01a0fb8e72977c06ec9", "d8f4ee69de8e1d8984dbfb19cb1f0d18d89c8bfa4ef1912f12e9be7dcd8932e9", "d8f771c6ae73553fbbbf3d1bd0c19facaf69db4bc9663928789a970ca3e39f8b", "ea04cfe2d1895736063289c7edead8e74a8aacec52940821218aa1ca2bb6b9dc", "edd0ff89af7bf957c0a64e12d90964889fd869df8d35f941cbdbd0b7eff7336f", "f3cb336fcca7756a0dac16768b2d9626c59b52929126d8829143d0005053b580", "f48acee2213226a2d354ba8ac77a84a0b32b0685461da28b0e345fffaf72048c", "f6977b271a507bc5f4b74e4f2dbda77a93256870efa48e56e5eedbbf104f02b0", "f749a7e154595c62522a8e194eabe764b88872b82738a72d47d542f47d874d60","0a0b5a41127b8a33da8142b9fe055caa42634247501d7157c9432cce612f7392", "0f1dc290dc20f3eefb0f6cb4d965e437f207484151f57d0fe3b58b33565e99bc", "37d0bda4af155625931d030c23594d450a272549ddb32380d3c5ee94feb03a25", "49c20938fbd31a92a359147b539de76d59be71abf7560801ecc497ca9c8ae809", "813c22cbeab8ac1f2d3571e16b1c45bef0e0743bbf27f0d5b2331829db81ea72", "dcdbcba9c56a123c2a494e23521ef80eb6cd69ba3b53d10f06b04cdc9477e2ed","2a11fb21911444fd0bf8c11641d17a22fe9d29dcf3d04a5808d8d7123257c5b3", "4698663f121799350de553937109a8d8d445268b43ebcf9159ecbdf9a7c48e71", "c551639236e79229cdc4e677d3cedd9bd4ed11fc0c9e10e58070df1289efb41f","5c96d63f7b6080c73fc53d47f0683062671116484eedbce497e061634d717a2b", "ff63770c252dc4b57e34a96e56ccfeef284436eb4e48141e19380181684ad75a","0881843b05737bb0c591be80a79ad05176d1ae2f20f7242e7d90c870cc202b00", "10709f73e42bd7c60b4bf038fa532c4e484c178e9b21fc28980985dd69b9b83d", "47cbb88eb955538ced5cb539b761105044bd407bcbedc3e76f3be11e0f7201f2", "6583a9def99be80d7d4be6df47c0ed268498264f415dba6810ea0ee33d251be3", "88ee004c19e5b73f52e0caca77efa5c2f8f314593f41fd82a8ff675a8788a6b7", "bc157725ccfe5c3c0fbd8e1c0361defec593601eaa42a9a8dbff93309148cc38", "bd7ba6993c34f41610ef669d0d3ec7486c3ee68bf5173d35dd42e276977e16f2","08be38ec51a77de7fb197a79b5e15ad88af3fc1975a883cd7d316584b4865939", "19900fdcc3fe1bf06e9ee5979a4fe3690aa267d8dc8c93e843ad5e86a33f3778", "41f21786195be40055f16433dc3903eb9f8625ab80b1a14f998866059b438303", "8215c16d5462d70b3c146a74a6ac6bf38b434691bd27d5c46754ace5fd2b4964", "c24d6a9de8f394854e91a84ece64e9a5a8fcc8b66e7e67ac47473e5cf709cfde", "c5c00d5ff9d27ada2c860d365c26ef02e5a9ddb92877313ef18b8c30ce5e1cf8", "dd003c8b17b76b906004a064556e75239620fe4ef1bea8737dc8d309f98743a1","07cb668bcfc5b7c4834ab7c5265d68c08fe4715630d109f21128c2a174d23404", "64c9949505c635fbc7dfb1aec64f03f05da68b70f76df8a49610f1a9e5ffb6ef", "dff5374454277c72f2ba44a675508d6d40f2d36248ebd2011fcfd449c86ac149", "ed2c9127ea9135548c8fcb123bc1d85ee0ae5945c39eaa3b287e85ef82cb2efe", "f4be6bd74d44fcef022c0da6ea1b8bdba01f018d520950b7873e003c2fd91751", "fa2a8368359ab4733c6e2c5c7e3379f5e09a22df0086f9b0c0216b16ec3c91e6","25d36ef665141d35181589030672440b3a127d5b66489194bfd3e75dd7f4d956", "29c5fe838dbcf78b8e6c77c60cd8a2e6c19515b6cd986e11d3b3e4af5fe61c73", "34d3ab1660b5ff89008d8d5b842deaef7fc9de369f0dc0575bf8a25a95dd370b", "480a66d176d1d6eb10e6a9ded5d52d9ccbc26e22e046d0a13ec32a665b861bf8", "5c48f798b6580ed54a0d46bffe344ae35e1de3db5530d9e6072a92eee47fafc6", "884e86732f0c0ccb7d802a4fd6f08d707fbd053a2e7ffd99934f730f8851a36a", "887cb9df4d570e61ddc552815183a9b845ac650be37c10bff378c16c87f2f3ad", "8c34caed39b4aecca70e2cb648111ecd06ff348959c302c8d3a84ab9e0547c2b", "90a3926cc4c24ed6a962d9044ea9c0d4f362736462939a8073db00c42a2ddced", "97112f56c16bbe7086eab883ad501685588c44311f1d2ea7f4791934dce4fa10", "9f7f817bcbdf058afb30c75b8cffdfc41c2e2dd5a8ea2c675f467646373f361f", "a3d9a3ae58aca374692d68a1e336bac22b608a55afc23c20a0bc2dcbe2c54279", "ad134dd7a40d40c7325053b2ea8f4a944fcf80f314668be81f7f830032695520", "b1edc65392305bb7062c86930baae32ead04731e9dbd806ab6a5c382e9e52e3f", "ba859a34d14d71ea328a4069c8f76f2da1e6981a39148397905a059c05c9e3a2", "c6ba383e5766be8516a6ea35256d80276752948c0ffd8a275778bfab3bb65de0", "cf3c86c15142914cb1761a50b19b05c51e23e3e4fac6efb25d22c1a77393ce99", "d4cf8238a8e103970c3aff3cda5b52982e49d80ef8d1a272c9f88dab1a6eaaf8", "e1c8a95e21ca685dacf2bc9dcee225d34f92112bbfe0e6cea16669a181e41013", "eda4895c85933070ba1d719ad720ae7d195274c6131659533e39d51ab32620e6", "ff4aebfc38e9b0ca23948b72a8522227f211f9c2afb2280543470324493f1a40","18cb8d4b430b8c6f45e050534e73d8c914f1e0be92a33270b87796f5bd217205", "4d9c00fc77e231366228a938868306a71383967472d0bbf1a89afe390d80599c", "4e4bd6805020b023ba4c70b231ad275bc7aa308bf37b135bef05ba68da129696", "560bd3a88fb927583d1c2e8f71ec880038018243da803faa761852f3ea3c7755", "7639b02a5bde68cb99710937389fdf80a84f6727b986d1a1769ffad95ffcbad0", "7cfba5dca44e825ad71f9d883d45919a12656c51d5eb8a51fcb4e155bf27477c", "8c5f650be8870eaaf2b6ca4050ce1139ffbc699cc836da5802d4884959b2ed0d", "9debddad3c7b5cc25e88b9295a564e13ca9d945a6fcb80462df3d5a2ab830623", "a303ad4f575489cae3854a1ca53376d973520bb9323ad2df169db7efdfd9e393", "a335b31be9707d1960e67b6ac6e13598d05eb4d924c45cd6a16daec275c3f1ae", "a78e597bb942c221202fee778ec956e2b7381db4f0b32acca773543561f44af3", "ad3f560b6ad8a02ea4dd1c194a396ffac3bf06bcf0a004c60911c3f198eb2645", "bb23ae297337b1abc92ab289aa3d2b121b7b225e4c30fbd1051c0b5cf684de3e", "c10eab12fb04384da00d4a3e862005b846095b6bd500e4648e6c56698793e13a", "ca07ed841c430fedf79b2696148963cc5c5c989641e40aa34c022d4685e8ba3e", "da3b1ac39de4a77b643a4e1c03fc793bad1b66bfd8624630de173004857972df"]);
+
+      //Domains
+      in("DomainName", values=["8eh18dhq9wd.click", "8fhd2idhacas.click", "8fnuawbfuac.click", "8hdfiqowchq.click", "8nioqhxciwoqc.click", "admin-cancelreserv-cstmrs.com", "admin-captcha-properties-09118403.com", "admin-captcha-properties-095908403.com", "admin-captcha-properties.com", "admin-extranetrsvrv-captcha.com", "admin-extranetrsvrv-cstmrq.com", "admin-extranetrsvrv-cstmrs.com", "admin-extranetrsvrv-cstmrv.com", "admin-extranetupdating2208.com", "admin-properties-captcha-extranet.com", "admin-update-extranet.com", "badbooking-extranet.com", "badrec-extranet.com", "bkngpropadm.com", "bknpnt.com", "bknsverf.com", "bknvrfdn.com", "bknxmf.com", "boknsvrf.com", "booknsvrf.com", "booknvrd.com", "bookvrff.com", "bookvrfsd.com", "bqkngsrepovies.com", "bstkmonitorscap.com", "capcha-extranet.com", "centr-extranet.com", "dmnbkv.com", "extranet-admin-reservations2951.com", "extranet-cancelledreserv4758.com", "extranet-page.com", "extrannet-cheks3432.com", "extrannet-site634643.com", "helpguest-extranet.com", "ibookvrfn.com", "mdmvrfd.com", "mhiaofhaifs.click", "mhiaohcaffs.click", "mhiascjaoecj.click", "mvrfbkn.com", "mvvbkn.com", "mxvfb.com", "newmessage-extranet.com", "otmuqi.com", "pageconfirm-extranet.com", "qmabkngserccaptura.org", "request-extranet.com", "rewies-extranet.com", "rsrvpage-statement.com", "stats-extranets.com", "sweat-extranet.com", "vbookd.com", "vbookvrfd.com", "vfbkix.com", "vfbknx.com", "wfuekov.com", "xbkvn.com", "adsqwiolkuerkom.com", "afsdloiutropic.com", "alfryudabikuta.com", "ariokliasklfdnok.com", "blaksdioklery.com", "brev.powdermfr.com", "csttm.com", "dasrilkosdirosado.com", "djkloyfarelbister.com", "dlinofinopasster.com", "dorevilokpadjghs.com", "fadoklismokley.com", "fikysandroisder.com", "gansroroyfgdst.com", "ganstopliomalifas.com", "gasrihoirteyui.com", "gasrobariokley.com", "go.estetistaselmasoares.com", "h1asoplooproe.com", "h1hundynotesuom.com", "jauiolkerytamp.com", "jojikloertoys.com", "jzluw.com", "k5aiodybloxdasom.com", "kasldericoname.com", "kutakdokliurio.com", "kwestgidokudiojek.com", "lilikutliputsdf.com", "mio.skyfytrade.com", "msxghj.com", "naintn.com", "on.electricym.com", "rihby.com", "rof.maidinmauiclean.com", "sigdalokanolkas.com", "signamoykloysd.com", "sisadfriolkdle.com", "sistoronykastadro.com", "start.globalvisassolution.com", "triosdoryumkas.com", "udcym.com", "ugcso.com", "valoikdortordas.com", "ycjxy.com", "zyvxdw.com","awake-weaves.cyou", "bmy7etxgksxo.objectstorage.sa-santiago-1.oci.customer-oci.com", "deafeninggeh.biz", "debonairnukk.xyz", "diffuculttan.xyz", "effecterectz.xyz", "immureprech.biz", "iyoutubetomp4.com", "lusibuck.oss-cn-hongkong.aliyuncs.com", "sordid-snaked.cyou", "tailyoveriw.my", "wrathful-jammy.cyou", "windows-software-updates.com", "pharmacynod.com", "bidder-horizontal-wildlife-invoice.trycloudflare.com", "bristol-weed-martin-know.trycloudflare.com", "dechromo.com", "enerjjoy.com", "ksdgbx9oenj.top", "musicians-forestry-operation-angels.trycloudflare.com", "name-kw-papua-booking.trycloudflare.com", "peter-secrets-diana-yukon.trycloudflare.com", "phsujibusy4ubad.top", "ynzal.com", "zoloft-indianapolis-riders-convinced.trycloudflare.com", "airbnb.reservation-message-captcha.com", "allturkeynews.fun", "anydeske.icu", "bohemiatravel.info", "booking-confirmation-981621.com", "booking-confirmation-983421.com", "booking-confirmation-983621.com", "booking.extranet-message.com", "bookingapartment.online", "confirmation-id2137.com", "confirmation-id2159.com", "confirmation-id2167.com", "confirmation-id2178.com", "confirmation-id2179.com", "confirmation-id2317.com", "confirmation-id2319.com", "confirmation-id2479.com", "confirmation-id2519.com", "confirmation-id2579.com", "confirmation-id2718.com", "confirmation-id2719.com", "confirmation-id2759.com", "confirmation-id2789.com", "confirmation-id2798.com", "confirmation-id2817.com", "confirmation-id3178.com", "czechart.info", "czechbeerfest.info", "czechcastles.info", "czechcuisine.info", "czechexplorer.fun", "czechfolklore.info", "czechglass.info", "czechheritage.info", "czechhistory.info", "czechitout.fun", "czechlanguage.info", "czechmusicfest.info", "czechnature.info", "czechpulse.fun", "czechstories.fun", "czechtourism.info", "czechtraditions.info", "czechwine.info", "czspa.info", "eurohotelbooking.com", "extranet-message.com", "fhkdjh.info", "globalcoinbases.com", "glopix.store", "haberinfo.fun", "hotel-confirmation7256.com", "hotelconfirmation7256.com", "hotelconfirmations-93251.com", "hotelconfirmations.com", "hotelexeprisma-confirmation.com", "hrturkeyx.info", "infoturkey.fun", "int-secure.com", "italiancuisine.info", "italianculture.info", "joiybnewstur.info", "karlovyvaryspa.info", "lomstukil.xyz", "mohgenewtr.info", "moraviaculture.info", "myczechlife.fun", "myturkeyinfo.space", "nurix.live", "petroleri.xyz", "petrolieri.info", "pragueevents.info", "properties-captcha.com", "reservation-message-captcha.com", "secure-int.us", "tillbarelest.com", "trenditaly.fun", "turheritage.org", "turkeynews.fun", "turkinfohub.fun", "turkishcarpets.info", "turkishdelights.info", "turkishewines.info", "turkreport.fun", "tuvex.online", "www.secure-int.us", "zomex.live", "jotunheim.name", "vanaheim.cn", "campzip1.b-cdn.net", "campzips1.b-cdn.net", "mato-camp-v1.b-cdn.net", "mato-camp-v3.b-cdn.net", "mato-camp-v4.b-cdn.net", "mato-camp2.b-cdn.net", "mato3.b-cdn.net", "phattrienkynang.page", "veepteero.com", "vercapth63.b-cdn.net", "www.phattrienkynang.page", "citellcagt.top", "diecam.top", "escczlv.top", "kinwlyo.xyz", "korxddl.top", "localixbiw.top", "narrathfpt.top", "peppinqikp.xyz", "stochalyqp.xyz"]);
+
+      // IPs
+      in("RemoteAddressIP4", values=["178.250.186.16", "185.221.214.197", "193.233.175.147", "194.67.206.109", "195.133.49.180", "45.134.26.74", "46.173.214.61", "46.173.214.64", "46.173.214.8", "62.60.187.17", "84.21.189.81", "89.23.123.45", "91.108.244.88", "92.255.57.155", "62.106.66.112", "185.215.113.43", "216.245.184.179", "23.227.203.162", "65.109.226.176", "65.38.120.47", "67.220.74.132", "176.46.152.39", "185.209.21.55", "216.74.123.49", "23.80.81.166", "38.146.25.89", "45.145.7.134", "87.120.222.208", "185.147.125.145", "185.147.125.146", "185.147.125.147", "185.243.96.115", "185.42.12.45", "185.7.214.51", "185.7.214.57", "193.143.1.5"])}
+
+      | table([@timestamp, #event_simpleName, cid, aid, ComputerName, UserName, CommandLine, ParentBaseFileName, RegStringValue])
+    end: now
+    start: 15m
+    width: 12
+    options:
+      columns:
+      - fieldName: '@timestamp'
+        format: datetime
+        type: field
+        width: 200
+      - groupByPrefix: false
+        header: Field List
+        type: fieldList
+      newestAtBottom: true
+      showOnlyFirstLine: false
+    visualization: list-view
+    title: IOC Hits of Known Hashes, Domains, IPs
+    isLive: false
+    type: query
+  520c3f16-e07d-4d16-9f65-ed27d9d0bec3:
+    x: 0
+    y: 40
+    height: 4
+    queryString: |-
+      // Detects Lotus querying for the hardware profile GUID.
+
+      #event_simpleName=ProcessRollup2 event_platform=Win
+      | ImageFileName=/\\cmd\.exe$/i
+      | CommandLine=/.*\/c reg query .*\\ControlSet001\\Control\\IDConfigDB\\Hardware Profiles\\0001.* \/v HwProfileGuid \| findstr HwProfileGuid.*/
+      | table([@timestamp, #event_simpleName, cid, aid, ComputerName, UserName, CommandLine, ParentBaseFileName, RegStringValue])
+    end: now
+    start: 15m
+    width: 12
+    options:
+      columns:
+      - fieldName: '@timestamp'
+        format: datetime
+        type: field
+        width: 200
+      - groupByPrefix: false
+        header: Field List
+        type: fieldList
+      newestAtBottom: true
+      showOnlyFirstLine: false
+    visualization: list-view
+    title: Lotus Querying for Hardware Profile GUID
+    isLive: false
+    type: query
+  b9137c59-f12d-4a0a-a5de-b8e641801c1d:
+    x: 0
+    y: 28
+    height: 4
+    queryString: |-
+      // User executed a PowerShell downloader via Run dialog box to execute ShadowPipe (CSA-250884)
+
+      event_platform = Win
+      | "#event_simpleName" = RegSystemConfigValueUpdate
+      | RegObjectName=~/^\\REGISTRY\\USER\\.*\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RunMRU$/
+      | RegStringValue=~/^powershell Iex \(\(Invoke-RestMethod -Uri https:\/\/.* -Method GET\)\.note\.body\)/
+      | table([@timestamp, #event_simpleName, cid, aid, ComputerName, UserName, CommandLine, ParentBaseFileName, RegStringValue])
+    end: now
+    start: 15m
+    width: 12
+    options:
+      columns:
+      - fieldName: '@timestamp'
+        format: datetime
+        type: field
+        width: 200
+      - groupByPrefix: false
+        header: Field List
+        type: fieldList
+      newestAtBottom: true
+      showOnlyFirstLine: false
+    visualization: list-view
+    title: Powershell Downlaoder via Run to Execute ShadowPipe
+    isLive: false
+    type: query
+  7603a211-053f-45a0-9f26-bb1dc1842575:
+    x: 0
+    y: 44
+    height: 4
+    queryString: |-
+      #event_simpleName=/ProcessRollup2|SyntheticProcessRollup2|ProcessBlocked/
+      | event_platform=Win
+      | FileName=powershell.exe
+      | CommandLine=/Incident_reported.pdf/i
+      | table([@timestamp, #event_simpleName, cid, aid, ComputerName, UserName, CommandLine, ParentBaseFileName, RegStringValue])
+    end: now
+    start: 15m
+    width: 12
+    options:
+      columns:
+      - fieldName: '@timestamp'
+        format: datetime
+        type: field
+        width: 200
+      - groupByPrefix: false
+        header: Field List
+        type: fieldList
+      newestAtBottom: true
+      showOnlyFirstLine: false
+    visualization: list-view
+    title: StealcV2-related Powershell referencing PDF file
+    isLive: false
+    type: query
+  dd496adb-d660-4b21-a0f0-c2aedf43d262:
+    x: 0
+    y: 52
+    height: 4
+    queryString: |-
+      // Tofsee ASEP service creation command line (CSIT-25058)
+
+      #eventPlatform = Win
+      | "#event_simpleName" = ProcessRollup2
+      | CommandLine=~/binPath= \"C:\\Windows\\SysWOW64\\[a-z]{5,8}\\[a-z]{5,8}\.exe .* type= own start= auto DisplayName= \"wifi support\"$/
+      | table([@timestamp, #event_simpleName, cid, aid, ComputerName, UserName, CommandLine, ParentBaseFileName, RegStringValue])
+    end: now
+    start: 15m
+    width: 12
+    options:
+      columns:
+      - fieldName: '@timestamp'
+        format: datetime
+        type: field
+        width: 200
+      - groupByPrefix: false
+        header: Field List
+        type: fieldList
+      newestAtBottom: true
+      showOnlyFirstLine: false
+    visualization: list-view
+    title: Tofsee ASEP Service Creation
+    isLive: false
+    type: query
+  223ec5af-ecf2-4955-a002-fe80d3016a54:
+    x: 0
+    y: 8
+    height: 4
+    queryString: |-
+      //Node.js execution from AppData - This query detects the malicious Node.js variant of the CORNFLAKE backdoor, which is executed from the %AppData% directory
+
+      ProcessRollup2
+      | where CommandLine contains "%appdata%\\Local\\Programs\\nodejs\\node.exe -e "
+      | table([@timestamp, #event_simpleName, cid, aid, ComputerName, UserName, CommandLine, ParentBaseFileName, RegStringValue])
+    end: now
+    start: 1y
+    width: 12
+    options:
+      columns:
+      - fieldName: '@timestamp'
+        format: datetime
+        type: field
+        width: 200
+      - groupByPrefix: false
+        header: Field List
+        type: fieldList
+      newestAtBottom: true
+      showOnlyFirstLine: false
+    visualization: list-view
+    title: Node.js in AppData - Cornflake
+    isLive: false
+    type: query
+  2ebe25b0-85e7-4474-8587-8341b82d78c0:
+    x: 0
+    y: 16
+    height: 4
+    queryString: |-
+      // Explorer Spawning PowerShell
+      event_platform="Win" #event_simpleName="ProcessRollup2" FileName=/powershell/i
+      | ParentBaseFileName=/explorer\.exe/i
+      | CommandLine=/curl|DownloadString|(iwr|iex)\s|\.WebClient|mshta|FromBase64String|(Invoke-Expression|Invoke-WebRequest)/i
+      | table([@timestamp, #event_simpleName, cid, aid, ComputerName, UserName, CommandLine, ParentBaseFileName, RegStringValue])
+    end: now
+    start: 1y
+    width: 12
+    options:
+      cell-overflow: wrap-text
+      configured-columns: {}
+      row-numbers-enabled: false
+    visualization: table-view
+    title: Explorer Spawning Powershell
+    isLive: false
+    type: query
+  a70621ef-d333-4eb6-b821-6a57ca2509d3:
+    x: 0
+    y: 24
+    height: 4
+    queryString: |-
+      //PowerShell downloading and executing a script- The initial infection vector for CORNFLAKE.V3 is a PowerShell command that downloads and executes a script from a remote server. This query looks for that specific command line pattern.
+
+      ProcessRollup2
+      | where CommandLine contains "powershell -noP -w 1 -exec bypass -c IEX(New-Object Net.WebClient).DownloadString('"
+      | table([@timestamp, #event_simpleName, cid, aid, ComputerName, UserName, CommandLine, ParentBaseFileName, RegStringValue])
+    end: now
+    start: 1y
+    width: 12
+    options:
+      columns:
+      - fieldName: '@timestamp'
+        format: datetime
+        type: field
+        width: 200
+      - groupByPrefix: false
+        header: Field List
+        type: fieldList
+      newestAtBottom: true
+      showOnlyFirstLine: false
+    visualization: list-view
+    title: Powershell Script Download & Execution - CORNFLAKE.V3
+    isLive: false
+    type: query
+  815fa302-1de3-429b-958a-2327c6f322f6:
+    x: 0
+    y: 36
+    height: 4
+    queryString: |-
+      // Suspicious use of rundll32.exe - Another CORNFLAKE infection chain involves a malicious .bat or .js file, leading to the execution of rundll32.exe. This query can be adapted to find suspicious uses of this process
+      #event_simpleName=ProcessRollup2
+      | ImageFileName=/(rundll32\.exe|mshta\.exe)/i
+      | CommandLine=/cmd \/c/i
+      | table([@timestamp, #event_simpleName, cid, aid, ComputerName, UserName, CommandLine, ParentBaseFileName, RegStringValue])
+    end: now
+    start: 1y
+    width: 12
+    options:
+      columns:
+      - fieldName: '@timestamp'
+        format: datetime
+        type: field
+        width: 200
+      - groupByPrefix: false
+        header: Field List
+        type: fieldList
+      newestAtBottom: true
+      showOnlyFirstLine: false
+    visualization: list-view
+    title: Suspicious rundll32.exe - Cornflake
+    isLive: false
+    type: query
+  6037317f-4cc1-4ab1-9bb5-125a080f4974:
+    x: 0
+    y: 12
+    height: 4
+    queryString: |-
+      // Powershell/rundll32/mshta Followed by a "captcha verification" Comment
+      #event_simpleName=ProcessRollup2
+      | event_platform=Win
+      // Powershell or mshta run from run command
+      | ParentBaseFileName=/explorer\.exe/i FileName=/(rundll32|mshta|powershell)\.exe/i
+      // CommandLine containing network path (://) and comment (#)
+      | CommandLine=/\:\/\/.*# /i
+      | table([@timestamp, #event_simpleName, cid, aid, ComputerName, UserName, CommandLine, ParentBaseFileName, RegStringValue])
+    end: now
+    start: 1y
+    width: 12
+    options:
+      columns:
+      - fieldName: '@timestamp'
+        format: datetime
+        type: field
+        width: 200
+      - groupByPrefix: false
+        header: Field List
+        type: fieldList
+      newestAtBottom: true
+      showOnlyFirstLine: false
+    visualization: list-view
+    title: Powershell / rundll32 / mshta w/ Captcha Verification
+    isLive: false
+    type: query
+  b7d74064-fcfc-4ade-af62-2fca1fc5311c:
+    x: 0
+    y: 4
+    height: 4
+    queryString: |-
+      // RunMRU Registry Addition
+      event_platform="Win" #event_simpleName = "RegSystemConfigValueUpdate"
+      | RegObjectName=/RunMRU$/
+      | RegStringValue=/powershell|curl|DownloadString|(iwr|iex)\s|\.WebClient|mshta|FromBase64String|(Invoke-Expression|Invoke-WebRequest)/i
+      | table([@timestamp, #event_simpleName, cid, aid, ComputerName, UserName, CommandLine, ParentBaseFileName, RegStringValue])
+    end: now
+    start: 1y
+    width: 12
+    options:
+      cell-overflow: wrap-text
+      configured-columns: {}
+      row-numbers-enabled: false
+    visualization: table-view
+    title: RunMRU Registry Additions
+    isLive: false
+    type: query
+  68ed02e3-9be5-4091-abab-974461bc7c66:
+    x: 0
+    y: 48
+    height: 4
+    queryString: |-
+      // VenomRAT filename for activity described in CSA-241478
+
+      event_platform=Win | FilePath=/^\\Device\\HarddiskVolume\d+\\Users\\\w+\\AppData\\Local\\Temp\\$/ | FileName="TaSSIDSS.exe"
+      | table([@timestamp, #event_simpleName, cid, aid, ComputerName, UserName, CommandLine, ParentBaseFileName, RegStringValue])
+    end: now
+    start: 15m
+    width: 12
+    options:
+      columns:
+      - fieldName: '@timestamp'
+        format: datetime
+        type: field
+        width: 200
+      - groupByPrefix: false
+        header: Field List
+        type: fieldList
+      newestAtBottom: true
+      showOnlyFirstLine: false
+    visualization: list-view
+    title: VenomRAT Filename Activity
+    isLive: false
+    type: query
+  306d4e47-f7f1-4884-b6d1-5e145590a04a:
+    x: 0
+    y: 32
+    height: 4
+    queryString: |-
+      // Registry object name hardcoded in SeeLevel modules (CSIT-25114)
+
+      "#eventPlatform" = Win
+      | RegObjectName=~/^\\REGISTRY\\USER\\.*\\SOFTWARE\\Microsoft\\HTTP\\.*/i
+
+      | table([@timestamp, #event_simpleName, cid, aid, ComputerName, UserName, CommandLine, ParentBaseFileName, RegStringValue])
+    end: now
+    start: 15m
+    width: 12
+    options:
+      columns:
+      - fieldName: '@timestamp'
+        format: datetime
+        type: field
+        width: 200
+      - groupByPrefix: false
+        header: Field List
+        type: fieldList
+      newestAtBottom: true
+      showOnlyFirstLine: false
+    visualization: list-view
+    title: Hardcoded Reg Obj in SeeLevel Modules
+    isLive: false
+    type: query
+  de4d1056-6849-4ba1-94a4-8a133a289a18:
+    x: 0
+    y: 20
+    height: 4
+    queryString: |-
+      // Cyrillic characters with “CAPTCHA”-related words
+      #event_simpleName=ProcessRollup2
+      | event_platform=Win ParentBaseFileName=/explorer\.exe/i FileName=/powershell\.exe/i
+      // find CommandLine containing characters outside standard 0-127 ASCII - 0x00C0-0x052F (latin A - Cyrillic El)
+      | CommandLine=/[À-ԯ]/
+      // optional: look for network protocol reference
+      | CommandLine=/\:\/\//
+      // find words similar to "robot", "human", "CAPTCHA", or "verification"
+      | CommandLine=/([rгр][oοо][bб][oοо][tт]|[hн][uμ][mм][aаА][nп]|[cсС][aаА][pрР]([tтТ])?[cсС][hнН][aаА]|[vν][eе][rг][iі][fF][iі][cсС][aа][tт][iі][oо][nп])/iF
+      | non_ascii_CommandLine := replace("[\x00-\x7F]", with=" ", field=CommandLine)
+      | format("%s\n%s", field=[CommandLine, non_ascii_CommandLine], as=CommandLine)
+      | table([@timestamp, #event_simpleName, cid, aid, ComputerName, UserName, CommandLine, ParentBaseFileName, RegStringValue])
+    end: now
+    start: 1y
+    width: 12
+    options:
+      columns:
+      - fieldName: '@timestamp'
+        format: datetime
+        type: field
+        width: 200
+      - groupByPrefix: false
+        header: Field List
+        type: fieldList
+      newestAtBottom: true
+      showOnlyFirstLine: false
+    visualization: list-view
+    title: Cyrillic characters with CAPTCHA
+    isLive: false
+    type: query
+$schema: https://schemas.humio.com/dashboard/v0.22.0
